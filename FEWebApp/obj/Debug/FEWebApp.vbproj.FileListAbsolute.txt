@@ -1,0 +1,14 @@
+C:\Users\Administrator\source\repos\FEWebApp2\FEWebApp\bin\FEWebApp.dll.config
+C:\Users\Administrator\source\repos\FEWebApp2\FEWebApp\bin\FEWebApp.dll
+C:\Users\Administrator\source\repos\FEWebApp2\FEWebApp\bin\FEWebApp.pdb
+C:\Users\Administrator\source\repos\FEWebApp2\FEWebApp\bin\FEWebApp.xml
+C:\Users\Administrator\source\repos\FEWebApp2\FEWebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Administrator\source\repos\FEWebApp2\FEWebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Administrator\source\repos\FEWebApp2\FEWebApp\obj\Debug\FEWebApp.vbproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\FEWebApp2\FEWebApp\obj\Debug\FEWebApp.Resources.resources
+C:\Users\Administrator\source\repos\FEWebApp2\FEWebApp\obj\Debug\FEWebApp.vbproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\FEWebApp2\FEWebApp\obj\Debug\FEWebApp.vbproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\FEWebApp2\FEWebApp\obj\Debug\FEWebApp.vbproj.CopyComplete
+C:\Users\Administrator\source\repos\FEWebApp2\FEWebApp\obj\Debug\FEWebApp.dll
+C:\Users\Administrator\source\repos\FEWebApp2\FEWebApp\obj\Debug\FEWebApp.xml
+C:\Users\Administrator\source\repos\FEWebApp2\FEWebApp\obj\Debug\FEWebApp.pdb

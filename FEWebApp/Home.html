@@ -1,0 +1,520 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>HOME PAGE</title>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+    <style type="text/css">
+        body {
+            font-family: Arial;
+        }
+        article {
+            background-color: whitesmoke;
+            text-align: center;
+        }
+
+        .service {
+            font-size: 30px;
+        }
+
+        #prod-Info {
+            width: 100%;
+            height: 300px;
+            border-spacing: 5px;
+            border: groove;
+        }
+
+        #prod-label {
+            vertical-align: top;
+            /*object-position: right;*/
+            max-height: 500px;
+            max-width: 80px;
+            float: right;
+        }
+
+        #prod-img {
+            max-height: 250px;
+            max-width: 300px;
+        }
+
+        #prodName {
+            font-family: Arial;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        #newPrice {
+            color: cornflowerblue;
+            font-family: 'Times New Roman';
+            font-style: oblique;
+            display: inline;
+            font-size: 15px;
+        }
+
+        #oldPrice {
+            color: grey;
+            font-family: Arial;
+            font-size: 13px;
+            display: inline;
+            text-decoration: line-through;
+        }
+
+        #discount {
+            color: grey;
+            font-family: Arial;
+            font-size: small;
+            display: inline;
+        }
+
+        #prod-td {
+            border: 1px solid white;
+            border-radius: 8px;
+            background-color: white;
+            width: 250px;
+            height: 150px;
+            margin: auto;
+            width: 25%;
+            padding: 15px;
+        }
+
+        #prodCat {
+            margin:2%;
+            vertical-align: middle;
+            width: 250px;
+            border: 2px solid dodgerblue;
+            border-radius: 8px;
+            font-size: 15px;
+            padding: 10px 15px;
+            display: inline-block;
+            line-height: 20px;
+            background-color: white;
+        }
+
+            #prodCat a {
+                color: dodgerblue;
+                text-decoration: 5px;
+            }
+
+            #prodCat:hover {
+                color: white;
+                background-color: dodgerblue;
+                text-decoration: none;
+            }
+
+            #prodCat a:hover {
+                color: white;
+                text-decoration: none;
+            }
+        #promo {
+            height: 80%;
+            margin: auto;
+            width: 15%;
+            padding: 15px;
+        }
+        #promo img{
+            max-width:100%;
+            height:100%;
+        }
+        * {
+            box-sizing: border-box
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+            /* On hover, add a black background color with a little bit see-through */
+            .prev:hover, .next:hover {
+                background-color: rgba(0,0,0,0.8);
+            }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+            .active, .dot:hover {
+                background-color: #717171;
+            }
+
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <section>
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="https://shopdunk.com/images/uploaded/banner/thang%209%202023/event%20tr%E1%BA%A3%20h%C3%A0ng_PC.jpg" style="width:100%">
+                <div class="text">Caption Text</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="https://shopdunk.com/images/uploaded/banner/thang%209%202023/banner_iphone_15_3_PC_coc.jpg" style="width:100%">
+                <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="https://shopdunk.com/images/uploaded/banner/thang%209%202023/banner%20iphone%2015_PC%20(2).jpg" style="width:100%">
+                <div class="text">Caption Three</div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+    <article>
+        <div class="promotion">
+            <table>
+                <tr>
+                    <td id="promo">
+                        <img src="https://shopdunk.com/images/uploaded/BONUSt7.png" />
+                    </td>
+                    <td id="promo">
+                        <img src="https://shopdunk.com/images/uploaded/Bonus%20banner-26.png" />
+                    </td>
+                    <td id="promo">
+                        <img src="https://shopdunk.com/images/uploaded/Bonus%20banner-16.png" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="products">
+            <h1>iPhone</h1>
+            <table id="pro-Info">
+                <tr>
+                    <td id="prod-td">
+                        <img id="prod-label" img src="https://shopdunk.com/images/uploaded/icon/nhan-coc.png" />
+                        <img id="prod-img" src="https://shopdunk.com/images/thumbs/0007808_iphone-14-pro-max-128gb_240.png" /> <br />
+                        <p id="prodName">iPhone 14 Pro Max 128GB</p>
+                        <p id="newPrice">26.150.000đ</p>
+                        <p id="oldPrice">34.000.000đ</p>
+                        <p id="discount">-25%</p>
+                    </td>
+                    <td id="prod-td">
+                        <img id="prod-label" src="https://shopdunk.com/images/uploaded/icon/nhan-coc.png" />
+                        <img id="prod-img" src="https://shopdunk.com/images/thumbs/0008734_iphone-14-pro-128gb_240.png" /> <br />
+                        <p id="prodName">iPhone 14 Pro 128GB</p>
+                        <p id="newPrice">23.890.000đ</p>
+                        <p id="oldPrice">30.990.000đ</p>
+                        <p id="discount">-22%</p>
+                    </td>
+                    <td id="prod-td">
+                        <img id="prod-label" src="https://shopdunk.com/images/uploaded/icon/new.png" />
+                        <img id="prod-img" src="https://shopdunk.com/images/thumbs/0020320_iphone-15-128gb_240.webp" /> <br />
+                        <p id="prodName">iPhone 15 128GB</p>
+                        <p id="newPrice">22.999.000đ</p>
+                    </td>
+                    <td id="prod-td">
+                        <img id="prod-label" src="https://shopdunk.com/images/uploaded/icon/new.png" />
+                        <img id="prod-img" src="https://shopdunk.com/images/thumbs/0020311_iphone-15-pro-max-256gb_240.webp" /> <br />
+                        <p id="prodName">iPhone 15 Pro Max 256GB</p>
+                        <p id="newPrice">34.999.000đ</p>
+                    </td>
+                </tr>
+            </table>
+            <div id="prodCat">
+                <a href="ProductCategory.html">Xem tất cả các Iphone <b>&gt;</b></a>
+            </div>
+
+            <h1>iPad</h1>
+            <table id="pro-Info">
+                <tr>
+                    <td id="prod-td">
+                        <img id="prod-label" img src="https://shopdunk.com/images/uploaded/icon/nhan-coc.png" />
+                        <img id="prod-img" src="https://shopdunk.com/images/thumbs/0007808_iphone-14-pro-max-128gb_240.png" /> <br />
+                        <p id="prodName">iPhone 14 Pro Max 128GB</p>
+                        <p id="newPrice">26.150.000đ</p>
+                        <p id="oldPrice">34.000.000đ</p>
+                        <p id="discount">-25%</p>
+                    </td>
+                    <td id="prod-td">
+                        <img id="prod-label" src="https://shopdunk.com/images/uploaded/icon/nhan-coc.png" />
+                        <img id="prod-img" src="https://shopdunk.com/images/thumbs/0008734_iphone-14-pro-128gb_240.png" /> <br />
+                        <p id="prodName">iPhone 14 Pro 128GB</p>
+                        <p id="newPrice">23.890.000đ</p>
+                        <p id="oldPrice">30.990.000đ</p>
+                        <p id="discount">-22%</p>
+                    </td>
+                    <td id="prod-td">
+                        <img id="prod-label" src="https://shopdunk.com/images/uploaded/icon/new.png" />
+                        <img id="prod-img" src="https://shopdunk.com/images/thumbs/0020320_iphone-15-128gb_240.webp" /> <br />
+                        <p id="prodName">iPhone 15 128GB</p>
+                        <p id="newPrice">22.999.000đ</p>
+                    </td>
+                    <td id="prod-td">
+                        <img id="prod-label" src="https://shopdunk.com/images/uploaded/icon/new.png" />
+                        <img id="prod-img" src="https://shopdunk.com/images/thumbs/0020311_iphone-15-pro-max-256gb_240.webp" /> <br />
+                        <p id="prodName">iPhone 15 Pro Max 256GB</p>
+                        <p id="newPrice">34.999.000đ</p>
+                    </td>
+                </tr>
+            </table>
+            <div id="prodCat">
+                <a href="ProductCategory.html">Xem tất cả các Ipad <b>&gt;</b></a>
+            </div>
+            <h1>Mac</h1>
+            <table id="pro-Info">
+                <tr>
+                    <td id="prod-td">
+                        <img id="prod-label" img src="https://shopdunk.com/images/uploaded/icon/nhan-coc.png" />
+                        <img id="prod-img" src="https://shopdunk.com/images/thumbs/0007808_iphone-14-pro-max-128gb_240.png" /> <br />
+                        <p id="prodName">iPhone 14 Pro Max 128GB</p>
+                        <p id="newPrice">26.150.000đ</p>
+                        <p id="oldPrice">34.000.000đ</p>
+                        <p id="discount">-25%</p>
+                    </td>
+                    <td id="prod-td">
+                        <img id="prod-label" src="https://shopdunk.com/images/uploaded/icon/nhan-coc.png" />
+                        <img id="prod-img" src="https://shopdunk.com/images/thumbs/0008734_iphone-14-pro-128gb_240.png" /> <br />
+                        <p id="prodName">iPhone 14 Pro 128GB</p>
+                        <p id="newPrice">23.890.000đ</p>
+                        <p id="oldPrice">30.990.000đ</p>
+                        <p id="discount">-22%</p>
+                    </td>
+                    <td id="prod-td">
+                        <img id="prod-label" src="https://shopdunk.com/images/uploaded/icon/new.png" />
+                        <img id="prod-img" src="https://shopdunk.com/images/thumbs/0020320_iphone-15-128gb_240.webp" /> <br />
+                        <p id="prodName">iPhone 15 128GB</p>
+                        <p id="newPrice">22.999.000đ</p>
+                    </td>
+                    <td id="prod-td">
+                        <img id="prod-label" src="https://shopdunk.com/images/uploaded/icon/new.png" />
+                        <img id="prod-img" src="https://shopdunk.com/images/thumbs/0020311_iphone-15-pro-max-256gb_240.webp" /> <br />
+                        <p id="prodName">iPhone 15 Pro Max 256GB</p>
+                        <p id="newPrice">34.999.000đ</p>
+                    </td>
+                </tr>
+            </table>
+            <div id="prodCat">
+                <a href="ProductCategory.html">Xem tất cả các Mac <b>&gt;</b></a>
+            </div>
+            <h1>Watch</h1>
+            <table id="pro-Info">
+                <tr>
+                    <td id="prod-td">
+                        <img id="prod-label" img src="https://shopdunk.com/images/uploaded/icon/nhan-coc.png" />
+                        <img id="prod-img" src="https://shopdunk.com/images/thumbs/0007808_iphone-14-pro-max-128gb_240.png" /> <br />
+                        <p id="prodName">iPhone 14 Pro Max 128GB</p>
+                        <p id="newPrice">26.150.000đ</p>
+                        <p id="oldPrice">34.000.000đ</p>
+                        <p id="discount">-25%</p>
+                    </td>
+                    <td id="prod-td">
+                        <img id="prod-label" src="https://shopdunk.com/images/uploaded/icon/nhan-coc.png" />
+                        <img id="prod-img" src="https://shopdunk.com/images/thumbs/0008734_iphone-14-pro-128gb_240.png" /> <br />
+                        <p id="prodName">iPhone 14 Pro 128GB</p>
+                        <p id="newPrice">23.890.000đ</p>
+                        <p id="oldPrice">30.990.000đ</p>
+                        <p id="discount">-22%</p>
+                    </td>
+                    <td id="prod-td">
+                        <img id="prod-label" src="https://shopdunk.com/images/uploaded/icon/new.png" />
+                        <img id="prod-img" src="https://shopdunk.com/images/thumbs/0020320_iphone-15-128gb_240.webp" /> <br />
+                        <p id="prodName">iPhone 15 128GB</p>
+                        <p id="newPrice">22.999.000đ</p>
+                    </td>
+                    <td id="prod-td">
+                        <img id="prod-label" src="https://shopdunk.com/images/uploaded/icon/new.png" />
+                        <img id="prod-img" src="https://shopdunk.com/images/thumbs/0020311_iphone-15-pro-max-256gb_240.webp" /> <br />
+                        <p id="prodName">iPhone 15 Pro Max 256GB</p>
+                        <p id="newPrice">34.999.000đ</p>
+                    </td>
+                </tr>
+            </table>
+            <div id="prodCat">
+                <a href="ProductCategory.html">Xem tất cả các Watch <b>&gt;</b></a>
+            </div>
+            <h1>Âm thanh</h1>
+            <table id="pro-Info">
+                <tr>
+                    <td id="prod-td">
+                        <img id="prod-label" img src="https://shopdunk.com/images/uploaded/icon/nhan-coc.png" />
+                        <img id="prod-img" src="https://shopdunk.com/images/thumbs/0007808_iphone-14-pro-max-128gb_240.png" /> <br />
+                        <p id="prodName">iPhone 14 Pro Max 128GB</p>
+                        <p id="newPrice">26.150.000đ</p>
+                        <p id="oldPrice">34.000.000đ</p>
+                        <p id="discount">-25%</p>
+                    </td>
+                    <td id="prod-td">
+                        <img id="prod-label" src="https://shopdunk.com/images/uploaded/icon/nhan-coc.png" />
+                        <img id="prod-img" src="https://shopdunk.com/images/thumbs/0008734_iphone-14-pro-128gb_240.png" /> <br />
+                        <p id="prodName">iPhone 14 Pro 128GB</p>
+                        <p id="newPrice">23.890.000đ</p>
+                        <p id="oldPrice">30.990.000đ</p>
+                        <p id="discount">-22%</p>
+                    </td>
+                    <td id="prod-td">
+                        <img id="prod-label" src="https://shopdunk.com/images/uploaded/icon/new.png" />
+                        <img id="prod-img" src="https://shopdunk.com/images/thumbs/0020320_iphone-15-128gb_240.webp" /> <br />
+                        <p id="prodName">iPhone 15 128GB</p>
+                        <p id="newPrice">22.999.000đ</p>
+                    </td>
+                    <td id="prod-td">
+                        <img id="prod-label" src="https://shopdunk.com/images/uploaded/icon/new.png" />
+                        <img id="prod-img" src="https://shopdunk.com/images/thumbs/0020311_iphone-15-pro-max-256gb_240.webp" /> <br />
+                        <p id="prodName">iPhone 15 Pro Max 256GB</p>
+                        <p id="newPrice">34.999.000đ</p>
+                    </td>
+                </tr>
+            </table>
+            <div id="prodCat">
+                <a href="ProductCategory.html">Xem tất cả các Âm thanh <b>&gt;</b></a>
+            </div>
+            <h1>Phụ kiện</h1>
+            <table id="pro-Info">
+                <tr>
+                    <td id="prod-td">
+                        <img id="prod-label" img src="https://shopdunk.com/images/uploaded/icon/nhan-coc.png" />
+                        <img id="prod-img" src="https://shopdunk.com/images/thumbs/0007808_iphone-14-pro-max-128gb_240.png" /> <br />
+                        <p id="prodName">iPhone 14 Pro Max 128GB</p>
+                        <p id="newPrice">26.150.000đ</p>
+                        <p id="oldPrice">34.000.000đ</p>
+                        <p id="discount">-25%</p>
+                    </td>
+                    <td id="prod-td">
+                        <img id="prod-label" src="https://shopdunk.com/images/uploaded/icon/nhan-coc.png" />
+                        <img id="prod-img" src="https://shopdunk.com/images/thumbs/0008734_iphone-14-pro-128gb_240.png" /> <br />
+                        <p id="prodName">iPhone 14 Pro 128GB</p>
+                        <p id="newPrice">23.890.000đ</p>
+                        <p id="oldPrice">30.990.000đ</p>
+                        <p id="discount">-22%</p>
+                    </td>
+                    <td id="prod-td">
+                        <img id="prod-label" src="https://shopdunk.com/images/uploaded/icon/new.png" />
+                        <img id="prod-img" src="https://shopdunk.com/images/thumbs/0020320_iphone-15-128gb_240.webp" /> <br />
+                        <p id="prodName">iPhone 15 128GB</p>
+                        <p id="newPrice">22.999.000đ</p>
+                    </td>
+                    <td id="prod-td">
+                        <img id="prod-label" src="https://shopdunk.com/images/uploaded/icon/new.png" />
+                        <img id="prod-img" src="https://shopdunk.com/images/thumbs/0020311_iphone-15-pro-max-256gb_240.webp" /> <br />
+                        <p id="prodName">iPhone 15 Pro Max 256GB</p>
+                        <p id="newPrice">34.999.000đ</p>
+                    </td>
+                </tr>
+            </table>
+            <div id="prodCat">
+                <a href="ProductCategory.html">Xem tất cả các Phụ kiện <b>&gt;</b></a>
+            </div>
+        </div>
+        <div class="service">DỊCH VỤ</div>
+        <div class="news">TIN TỨC</div>
+    </article>
+</body>
+</html>
